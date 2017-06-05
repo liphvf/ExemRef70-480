@@ -1,0 +1,3 @@
+- <!DOCTYPE html> é obrigatório?
+- <meta charset="utf-8"/> existe outra forma de declarar?
+- <aside>, como assim fora do fluxo da página?
