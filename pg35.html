@@ -19,12 +19,17 @@
             alert("<p> elements with class subPara: " + paragraphs.length);
         }
     </script>-->
-        <script>
+    <!--<script>
         window.onload = function () {
             let paragraphs = document.querySelectorAll("#outerDiv");
             alert("<p> elements with class subPara: " + paragraphs.length);
         }
-    </script>
+    </script>-->
+    <!--<script>
+        var element = document.getElementById("outerDiv").appendChild(document.
+            createElement("article"));
+        element.innerText = "My new <article> element";
+    </script>-->
 </head>
 
 <body>
@@ -66,6 +71,24 @@
         </table>
         <input type="text" /><input type="submit" value="Submit" />
     </div>
+
+    <!--<script>
+        var element = document.getElementById("outerDiv").appendChild(document.
+            createElement("article"));
+        element.innerText = "My new <article> element";
+    </script>-->
+    <script>
+        var element = document.getElementById("outerDiv").insertBefore(
+            document.createElement("article"),
+            document.getElementById("innerDiv"));
+        element.innerText = "My new <article> element";
+
+
+        var innerDiv = document.getElementById("innerDiv");
+        var p = innerDiv.removeChild(document.getElementById("P1"));
+
+        innerDiv.removeNode(true);
+    </script>
 </body>
 
 </html>
