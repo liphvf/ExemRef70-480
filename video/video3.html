@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <!--Exibe o mouse ao passar por cima das imagens-->
+    <style>
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // Aqui ele vai pegar o elemento do video
+        var video;
+        window.onload = function () {
+            video = document.getElementById("sampleVideo");
+        }
+
+        // Criando a funcao de play
+        function play() {
+            video.play();
+        }
+        // Criando a funcao de pause
+        function pause() {
+            video.pause();
+        }
+        // Criando a funcao de back
+        function back() {
+            video.currentTime -= 10;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <video height="400" width="600" id="sampleVideo">
+                    <source src="video2.mp4" type="audio/mp4" />
+                </video>
+            </td>
+            <!--Define as imagens dos botões e os metodos que serão chamandos ao clicar-->
+            <td>
+                <img id="backButton" src="backword.png" onclick="back();" /><br/>
+                <img id="playButton" src="play.png" onclick="play();" /><br/>
+                <img id="PauseButton" src="pause.png" onclick="pause();" /><br/>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
