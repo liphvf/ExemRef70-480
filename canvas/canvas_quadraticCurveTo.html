@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        // JavaScript syntax:	context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+
+            ctxt.beginPath();
+            ctxt.moveTo(10, 380);
+            // ctxt.quadraticCurveTo(controlX, -controlY, endX, endY);
+            ctxt.quadraticCurveTo(300, -250, 580, 380);
+            ctxt.lineWidth = 25;
+            ctxt.strokeStyle = '#f00';
+            ctxt.stroke();
+        }
+    </script>
+
+</head>
+
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        // JavaScript syntax:	context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+
+            ctxt.beginPath();
+            ctxt.arc(150, 100, 75, 0, 2 * Math.PI, false);
+            ctxt.lineWidth = 25;
+            ctxt.strokeStyle = 'green';
+            ctxt.stroke();
+
+            ctxt.beginPath();
+            ctxt.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false);
+            ctxt.lineWidth = 25;
+            ctxt.strokeStyle = 'blue';
+            ctxt.stroke();
+
+            ctxt.beginPath();
+            ctxt.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false);
+            ctxt.lineWidth = 25;
+            ctxt.strokeStyle = 'cyan';
+            ctxt.stroke();
+            
+            ctxt.beginPath();
+            ctxt.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false);
+            ctxt.lineWidth = 25;
+            ctxt.strokeStyle = 'red';
+            ctxt.stroke();
+        }
+    </script>
+
+</head>
+
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+</body>
+
+</html>

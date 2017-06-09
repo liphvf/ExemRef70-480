@@ -9,17 +9,34 @@
     </style>
 
     <script>
+        // O CANVAS É BASEADO EM EIXO (X,Y) NESTE CASO ABAIXO COMEÇANDO DE CIMA PARA BAIXO
         window.onload = function () {
             // Pega o elemento do html
             var drawingSurface = document.getElementById("drawingSurface");
+
             // Seta o contexto para 2D
             var ctxt = drawingSurface.getContext("2d");
+
             // Resets/begins a new drawing path
             ctxt.beginPath();
+
             // Moves the context to the point set in the beginPath method
             ctxt.moveTo(10, 10);
+
             //  Sets the destination end point for the line
             ctxt.lineTo(225, 350);
+            ctxt.lineTo(300, 10);
+            ctxt.lineTo(400, 350);
+
+            // Define o tamanho da linha
+            ctxt.lineWidth = 5;
+
+            // Mudar a cor da linha
+            ctxt.strokeStyle = '#0f0';
+
+            // Define o formato da linha
+            ctxt.lineCap = "round";
+
             // Strokes the line, which makes the line visible
             ctxt.stroke();
         }
