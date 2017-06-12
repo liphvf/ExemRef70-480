@@ -1,5 +1,6 @@
 <html>
-<!--Melhor fonte de entendimento: https://www.w3schools.com/tags/canvas_quadraticcurveto.asp-->
+<!-- Melhor fonte de entendimento: https://www.w3schools.com/tags/canvas_beziercurveto.asp-->
+
 <head>
 
     <style>
@@ -9,17 +10,18 @@
     </style>
 
     <script>
-        // JavaScript syntax:	context.arc(x,y,r,sAngle,eAngle,counterclockwise);
         window.onload = function () {
             var drawingSurface = document.getElementById("drawingSurface");
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
-            ctxt.moveTo(10, 380);
-            // ctxt.quadraticCurveTo(controlX, -controlY, endX, endY);
-            ctxt.quadraticCurveTo(300, -250, 580, 380);
-            ctxt.lineWidth = 25;
-            ctxt.strokeStyle = '#f00';
+            ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            ctxt.lineTo(150, 125);
+            ctxt.quadraticCurveTo(300, 0, 450, 125);
+            ctxt.lineTo(353, 144);
+            ctxt.strokeStyle = "blue";
+            ctxt.lineCap = "round";
+            ctxt.lineWidth = 10;
             ctxt.stroke();
         }
     </script>
