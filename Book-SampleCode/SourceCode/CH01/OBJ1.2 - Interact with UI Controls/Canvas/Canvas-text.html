@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+            ctxt.strokeText("1. text with default font", 100, 100);
+            ctxt.font = "24px arial";
+            ctxt.strokeText("2. Text with altered font", 100, 125);
+
+            ctxt.font = "24px arial";
+            ctxt.strokeStyle = "Red";
+            ctxt.strokeText("3. Text with altered colored font", 100, 160);
+
+            ctxt.font = "24px arial";
+            ctxt.fillStyle = "Red";
+            ctxt.fillText("4. Text with altered colored font", 100, 185);
+
+            ctxt.font = "24px arial";
+            ctxt.textAlign = "center";
+            ctxt.fillStyle = "Red";
+            ctxt.fillText("5. Text with altered colored font Centered.", drawingSurface.width / 2, drawingSurface.height / 2);
+            
+        }
+    </script>
+</head>
+<body>
+
+    <canvas id="drawingSurface" width="600" height="400"></canvas>
+</body>
+</html>
+<!--
+
+  ctxt.lineTo(300, 10);
+            ctxt.lineTo(400, 350);
+-->

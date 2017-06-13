@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <meta http-equiv-"X-UA-Compatible" content="IE=edge"/>
+    <style>
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var video;
+        window.onload = function () {
+            video = document.getElementById("sampleVideo");            
+        }
+        
+        function play() {
+            
+            video.play();
+        }
+        function pause() {
+            video.pause();
+        }
+        function back() {
+            video.currentTime -= 10;
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <video height="400" width="600" id="sampleVideo" preload  style="border: 1px solid black;">                
+                    <source src="samplevideo.mp4" type="video/mp4" />                
+                </video>
+            </td>
+            <td>                
+                <img id="backButton" src="backword.png" onclick="back();" /><br />
+                <img id="playButton" src="forward.png" onclick="play();"/><br />
+                <img id="PauseButton" src="pause.png" onclick="pause();" /><br />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

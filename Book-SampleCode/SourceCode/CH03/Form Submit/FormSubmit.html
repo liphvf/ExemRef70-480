@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="jquery-2.0.3.min.js" type="text/javascript"></script>
+
+
+    <script>
+        $("document").ready(function () {
+            //$("form").submit(function () {
+
+            //    var fName = $("#firstName").val();
+            //    var lName = $("#lastName").val();
+            //    var qString = "Last Name=" + lName + "&First Name=" + fName;
+
+            //    $.ajax({
+            //        url: 'processSignUp.aspx',
+            //        type: "POST",
+            //        data: qString,
+            //        success: function (r) {
+            //        }
+            //    });
+            //    return false;
+            //});
+
+            $("form").submit(function () {
+                                
+                var qString = $(this).serialize();
+                alert(qString);
+                $.ajax({
+                    url: 'processSignUp.aspx',
+                    type: "POST",
+                    data: qString,
+                    success: function (r) {
+                    }
+                });
+                return false;
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <form id="signupForm">
+        First Name:
+        <input type="text" id="firstName" name="firstName" /><br />
+        Last Name:
+        <input type="text" id="lastName" name="lastName" /><br />
+        <input type="radio"  name="gender" value="m" />Male
+       <input type="radio" name="gender" value="f"/> Female
+        <input type="checkbox" name="brownCheck" /> Brown
+        <input type="checkbox" name="blueCheck"/> Blue
+        <input type="checkbox" name="greyCheck"/> Grey
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="jquery-2.0.3.min.js" type="text/javascript"></script>
+
+
+    <script>
+        $("document").ready(function () {
+            $("#btnSendXMLData").click(function () {
+                try {
+
+                    var xmlData = "<Person firstname='Rick' lastName='Delorme' hairColor='Brown' eyeColor='Brown' /> ";
+
+                    var xReq = new XMLHttpRequest();
+
+                    xReq.open("POST", "/ReceiveXMLData.aspx", false);
+                    xReq.responseType
+                    xReq.send(xmlData);
+
+
+                } catch (e) {
+                    alert(e.message);
+                }
+            });
+
+
+            $("#btnJSONPerson").click(function () {
+                var person = {
+                    FirstName: "Rick",
+                    HairColor: "Brown"
+                };
+
+                var jsonPerson = JSON.stringify(person);
+
+                $("#result").text(jsonPerson);
+            });
+
+
+            $("#btnJSONDeserialize").click(function () {
+                var req = new XMLHttpRequest();
+
+                req.open("GET", "MyJsonData.json", false);
+                req.send(null);
+                
+                var jsonPerson = JSON.parse(req.responseText);
+                                
+            });
+            
+
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnGetXMLData">Send XML Data</button>    
+    <button id="btnJSONPerson">JSON Serialization</button>
+    <button id="btnJSONDeserialize">JSON deserialization</button>
+    <div id="result"></div>
+</body>
+</html>

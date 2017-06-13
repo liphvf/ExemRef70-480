@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            height: 100px;
+            width: 500px;
+            border: 1px solid black;
+        }
+            div.long {
+                height: auto;
+                width: 50px;
+                border: 1px solid black;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+            }
+        p.indented {
+            text-indent: 50px;
+          
+        }
+               
+
+        p.alignment {
+            text-align: center;           
+        }
+
+        p.letterspace {
+            letter-spacing: 8px;
+        }
+
+        p.wordspace {
+            word-spacing: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <!--<p class="indented">This text is indented 50px.</p>-->
+        <!--<p class="spacing">This text is spaced.</p>-->
+        <!--<p class="alignment">This text is aligned center.</p>-->
+        <p class="letterspace">Letters are spaced.</p>
+        <p class="wordspace">Words are spaced.</p>
+    </div>
+    <br /><br /><br /><br />
+    <div class="long">
+        a very long sentence that may be broken up by hyphenation.
+    </div>
+</body>
+</html>

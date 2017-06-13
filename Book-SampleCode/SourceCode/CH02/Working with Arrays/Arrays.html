@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript">
+
+    window.onload = function () {
+        //var anArray = new Array();
+        //var anArray = new Array(5);
+        //alert(anArray[1]);
+        //var anArray = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var anArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton'];
+        //var anArray = new Array(5);
+        //alert(anArray.length);
+        //anArray[9] = 'soccer';                        
+        //alert(anArray.length);
+
+        //var multiArray = new Array(3);
+        //multiArray[0] = new Array(3);
+        //multiArray[1] = new Array(3);
+        //multiArray[2] = new Array(3);
+
+        //multiArray[1][2] = 'ball sport';
+
+       // var sports = new Array( 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var moreSports = new Array('soccer', 'basketball', 'hockey');
+        //var combinedSports =  sports.concat(moreSports);
+
+        //document.write(combinedSports.join("-"));
+
+
+        //sports.indexOf();
+        //sports.lastIndexOf();
+        //var sports = new Array('soccer', 'basketball', 'hockey','football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var index = sports.indexOf('footall', 0);
+        //document.write(index);
+
+        //sports.join();
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var joined = sports.join(',');
+        //document.write(joined);
+
+
+
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+
+
+
+        //sports.reverse();
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var reversedSports = sports.reverse();
+        //document.write(sports.join('-'));
+
+
+        //sports.sort();
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //alert(sports.indexOf('soccer'));
+        //sports.sort();
+        //alert(sports.indexOf('soccer'));
+
+        //sports.slice();
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var someSports = sports.slice(1, 2);
+        //document.write(sports.join(";"));
+        //document.write("<BR />");
+        //document.write(someSports.join(";"));
+
+        //sports.splice();
+        //var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        //var splicedItems = sports.splice(1, 3, 'golf', 'curling', 'darts');
+        //document.write(sports.join(";"));
+        //document.write("<BR />");
+        //document.write(splicedItems.join(";"));
+
+
+
+        //specializing the Array.
+
+        //('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+
+        //sports.pop();            
+        //var sports = new Array();
+        //sports.push('soccer', 'basketball', 'hockey');
+        //sports.push('football');
+
+        //var nextSport = sports.pop();
+        //document.write(nextSport);
+
+        //sports.shift();
+        //sports.unshift();
+
+        //var sports = new Array();
+        //sports.unshift('soccer', 'basketball', 'hockey');
+        //sports.unshift('football');
+        //var nextSport = sports.shift();
+        //document.write(nextSport);
+
+        //queue
+        //var sports = new Array();
+        //sports.push('soccer');
+        //sports.push('basketball');
+        //sports.push('hockey');
+        //var get1 = sports.shift();
+        //sports.push('golf');
+        //var get2 = sports.shift();
+
+        //document.write(get1);
+        //document.write(get2);
+
+        //document.write("<BR />");
+
+        //document.write(sports.join(";"));
+
+        //array method with callbacks
+        //sports.every();
+
+        //var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        //var allEven = evenNumbers.every(evenNumberCheck, evenNumbers);
+        //if (allEven) {
+        //    document.write("All even");
+        //} else {
+        //    document.write("not all even.");
+        //}
+
+        //function evenNumberCheck(value, index, array) {
+            
+        //    return (value % 2) == 0;
+        //}
+
+        //sports.some();
+
+        //var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        //var allEven = evenNumbers.some(evenNumberCheck, evenNumbers);
+        //if (allEven) {
+        //    document.write("At least one even");
+        //} else {
+        //    document.write("none are even.");
+        //}
+
+        //function evenNumberCheck(value, index, array) {
+
+        //    return (value % 2) == 0;
+        //}
+
+       // sports.forEach();
+        //var sportsArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby'];
+        //sportsArray.sort().forEach(offerSport);
+        //function offerSport(value, index, array) {
+        //    var sportsList = document.getElementById("sportsList");
+        //    var bullet = document.createElement("li");
+        //    bullet.innerText = value;
+        //    sportsList.appendChild(bullet);            
+            
+        //}
+
+        //sports.filter();
+        //var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        //var allEven = evenNumbers.filter(evenNumberCheck, evenNumbers);
+
+        ////work with the even numbers....
+        
+        //function evenNumberCheck(value, index, array) {
+        //    return (value % 2) == 0;
+        //}
+
+        //sports.map();
+        //var money = [12.8, 15.9, 21.7, 35.2];
+        //var roundedMoney = money.map(roundOff, money);
+        
+        //function roundOff(value, position, array) {
+        //    return Math.round(value);
+        //}
+
+        //var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        //var squares = numbers.map(squareNumber, numbers);        
+        //function squareNumber(value, position, array) {
+        //    return value * value;
+        //}
+        
+        //sports.reduce();
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var factorials = numbers.reduce(factorial);
+        function factorial(previous, current) {
+            return previous * current;
+        }
+        document.write(factorials);      
+       
+     
+    }
+</script>
+<body>
+    <div id="sportsList">
+
+    </div>
+</body>
+</html>

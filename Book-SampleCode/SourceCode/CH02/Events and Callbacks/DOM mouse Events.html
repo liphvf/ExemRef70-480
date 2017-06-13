@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .scale {
+            transform:scale(1.5);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("yellowBox").addEventListener("mouseenter", yellowBoxEnter);
+            document.getElementById("yellowBox").addEventListener("mouseleave", yellowBoxLeave);
+        }
+
+        function yellowBoxEnter() {
+            this.classList.add("scale");
+        }
+
+        function yellowBoxLeave() {
+            this.classList.remove("scale");
+        }
+    </script>
+</head>
+<body>
+       <div id="yellowBox" style="width: 50%;height:50%;margin: 0 auto;background-color:yellow;"></div>
+</body>
+</html>

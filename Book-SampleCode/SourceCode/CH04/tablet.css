@@ -1,0 +1,55 @@
+﻿#blogPage {
+                display: -ms-grid;
+                -ms-grid-columns: 75% 1fr;
+                -ms-grid-rows: (20%)[6];
+                width: 90%;
+                height: 95%;
+                border: 1px dotted black;
+                margin: auto;
+            }
+
+                #blogPage > header {
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 2;
+                    -ms-grid-row: 1;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > footer {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 6;
+                    -ms-grid-column-span: 2;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > article {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 3;
+                    -ms-grid-row-span: 3;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > #calender {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 4;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > #blogRoll {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 5;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > #aboutMe {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 2;
+                    -ms-grid-column-span: 2;
+                    border: 1px dotted black;
+                }
+
+                #blogPage > #bloghistory {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 3;
+                    border: 1px dotted black;
+                }

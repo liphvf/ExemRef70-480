@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>        
+        #orange1 {
+            height: 75px;
+            width: 112px;       
+            top:75px;  
+            left: 100px;   
+        }
+            
+        .rota {             
+            transform: rotateY(180deg);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            document.getElementById("orange1").onclick = function () {                
+                
+                this.classList.add("rota");
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <img id="orange1" src="orange.jpg" style="position:relative" />
+
+</body>
+</html>

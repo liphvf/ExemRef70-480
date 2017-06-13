@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var globalvar = "global";
+
+        window.onload = function () {
+            var localVar = "local";
+            var scaleX = 0.0;
+            
+            document.getElementById("Div1").onclick = function () {
+                var insideDiv1Click = "insideDiv1";
+                alert(globalvar);
+                alert(localVar);
+                alert(insideDiv1Click);
+            }
+            document.getElementById("Div2").onclick = function () {
+                alert(globalvar);
+                alert(localVar);
+                alert(insideDiv1Click);
+            }
+            document.getElementById("Div3").onclick = function () {
+                var indsideDiv3 = "Div3";
+                AFunction();
+                BFunctionWithParam(insideDiv3);
+            }
+            function AFunction() {
+                var x;
+                alert(insideDiv3);
+            }
+
+            function BFunctionWithParam(p) {
+                alert(p);
+                alert(localVar);
+            }
+
+
+            document.getElementById("Div4").onclick = function () {
+                var scaleX = -3;
+                alert(scaleX);
+            }
+
+            function ScaleDiv() {
+                //code to scale the Div by a factor of scaleX
+            }
+        }
+
+    </script>
+</head>
+<body>    
+    <div id="Div1"></div>
+    <div id="Div2"></div>
+    <div id="Div3"></div>
+    <div id="Div4"></div>
+</body>
+</html>

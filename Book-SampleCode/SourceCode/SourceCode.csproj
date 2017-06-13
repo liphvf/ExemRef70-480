@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98020CE4-041D-4E91-93C7-30230ADF9412}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SourceCode</RootNamespace>
+    <AssemblyName>SourceCode</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>SourceCode_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="CH01\OBJ1.1 - Document Structure\Layout Containers\DivLayout.html" />
+    <Content Include="CH01\OBJ1.1 - Document Structure\Layout Containers\tableLayout.html" />
+    <Content Include="CH01\OBJ1.1 - Document Structure\Screen Readers\Document outlining.html" />
+    <Content Include="CH01\OBJ1.1 - Document Structure\Semantic Markup\HTML5.html" />
+    <Content Include="CH01\OBJ1.1 - Document Structure\Thought Experiment\HtmlConverted.html" />
+    <Content Include="CH01\OBJ1.1 - Document Structure\Thought Experiment\OldHTML.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Altering the DOM\DocumentSelectors.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-Arcs.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-bezier.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-fill.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-gradient.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-image.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-Lines.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-path.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-pattern.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-quadraticArc.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-radialgradient.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-Rect.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\Canvas-text.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Canvas\texture.PNG" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\AudioSamples.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\backword.png" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\forward.png" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\MediaSamples.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\pause.png" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\samplevideo.mp4" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\SVG\SVG-Image.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\SVG\SVG-Shapes-more.html" />
+    <Content Include="CH01\OBJ1.2 - Interact with UI Controls\SVG\SVG-Shapes.html" />
+    <Content Include="CH01\OBJ1.3 - Syling HTML elements\Change Locaton of Element\Moving HTML Elements.html" />
+    <Content Include="CH01\OBJ1.3 - Syling HTML elements\Show Hide Elements\programmatic hiding.html" />
+    <Content Include="CH01\OBJ1.3 - Syling HTML elements\Thought Experiment\DynamicQuestions.html" />
+    <Content Include="CH01\OBJ1.3 - Syling HTML elements\Transform\orange.jpg" />
+    <Content Include="CH04\clipping.html" />
+    <Content Include="CH04\ColumnLayout.html" />
+    <Content Include="CH04\CSSInheritance.html" />
+    <Content Include="CH04\CSSTransitions.html" />
+    <Content Include="CH04\Desktop.css" />
+    <Content Include="CH04\exclusions.html" />
+    <Content Include="CH04\flowers.JPG" />
+    <Content Include="CH04\jquery-2.0.3.min.js" />
+    <Content Include="CH04\listing46Reviewquestions.html" />
+    <Content Include="CH04\orange.jpg" />
+    <Content Include="CH01\OBJ1.3 - Syling HTML elements\Transform\Transform HTML Elements.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\AppCache\AppCache_1.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\GeoLocation\Geolocation - watch postion.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\GeoLocation\Geolocation.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\LocalStorage\Web Storage - custom object.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\LocalStorage\Web Storage.html" />
+    <Content Include="CH01\OBJ1.4 - Implement HTML5 API\Thought Experiment\RouteMapper.html" />
+    <Content Include="CH01\OBJ1.5 - Scope of Objects and Methods\Global Namespace\Global Namespace.html" />
+    <Content Include="CH01\OBJ1.5 - Scope of Objects and Methods\this keyword\this keyword.html" />
+    <Content Include="CH01\OBJ1.5 - Scope of Objects and Methods\Variable Scope\variable scope.html" />
+    <Content Include="CH01\OBJ1.6 - Implement Objects and Methods\Object Inheritance\objects-inheritance.html" />
+    <Content Include="CH01\OBJ1.6 - Implement Objects and Methods\Objects\objects.html" />
+    <Content Include="CH01\OBJ1.6 - Implement Objects and Methods\Thought Experiment\Thoughts.html" />
+    <Content Include="CH02\Anonymous Function\AnonymousFunctions.html" />
+    <Content Include="CH02\Anonymous Function\jquery-2.0.3.min.js" />
+    <Content Include="CH02\jQuery Ajax\Fruit\Orange.xml" />
+    <Content Include="CH02\jQuery Ajax\Fruit\Long.xml" />
+    <Content Include="CH02\jQuery Ajax\jquery-2.0.3.min.js" />
+    <Content Include="CH02\jQuery Ajax\jQuerySample.html" />
+    <Content Include="CH02\jQuery Ajax\Fruit\Round.xml" />
+    <Content Include="CH02\jQuery Wiring up Events\jquery-2.0.3.min.js" />
+    <Content Include="CH02\jQuery Wiring up Events\jQueryEvents.html" />
+    <Content Include="CH02\thisPointer\thisPointer.html" />
+    <Content Include="CH02\thisPointer\jquery-2.0.3.min.js" />
+    <Content Include="CH02\WebSockets\WebSocket.html" />
+    <Content Include="CH02\Working with Arrays\Arrays.html" />
+    <Content Include="CH02\Events and Callbacks\Callbacks Pattern.html" />
+    <Content Include="CH02\Program Flow\Conditional operations.html" />
+    <Content Include="CH02\Events and Callbacks\Custom Event.html" />
+    <Content Include="CH02\Events and Callbacks\DOM Change Events.html" />
+    <Content Include="CH02\Events and Callbacks\DOM Drag and Drop Events.html" />
+    <Content Include="CH02\Events and Callbacks\DOM Events.html" />
+    <Content Include="CH02\Events and Callbacks\DOM Focus Events.html" />
+    <Content Include="CH02\Events and Callbacks\DOM keyboard Events.html" />
+    <Content Include="CH02\Events and Callbacks\DOM mouse Events.html" />
+    <Content Include="CH02\Error Handling\Error Handling.html" />
+    <Content Include="CH02\Events and Callbacks\Events.html" />
+    <Content Include="CH02\Program Flow\Iterative Flow control.html" />
+    <Content Include="CH03\Consume Data\jquery-2.0.3.min.js" />
+    <Content Include="CH03\Consume Data\ConsumeData.html" />
+    <Content Include="CH03\Consume Data\MyXMLData.xml" />
+    <Content Include="CH03\Form Submit\FormSubmit.html" />
+    <Content Include="CH03\Form Submit\jquery-2.0.3.min.js" />
+    <Content Include="CH03\HTML5 Elements\ButtonElement.html" />
+    <Content Include="CH03\HTML5 Elements\Survey Form.html" />
+    <Content Include="CH03\Serialization\Binary.html" />
+    <Content Include="CH03\Serialization\JSON.html" />
+    <Content Include="CH03\Serialization\jquery-2.0.3.min.js" />
+    <Content Include="CH03\Serialization\orange.jpg" />
+    <Content Include="CH03\Validate with JavaScript\jquery-2.0.3.min.js" />
+    <Content Include="CH03\Validate with JavaScript\RegEx.html" />
+    <Content Include="CH04\blogpagegridlayout.html" />
+    <Content Include="CH04\Flexbox.html" />
+    <Content Include="CH04\graphic effects.html" />
+    <Content Include="CH04\phone.css" />
+    <Content Include="CH04\positioning.html" />
+    <Content Include="CH04\pseudo.html" />
+    <Content Include="CH04\Regions\regions.html" />
+    <Content Include="CH04\Regions\regionsource.html" />
+    <Content Include="CH04\ResponsiveUI.html" />
+    <Content Include="CH04\Shadow\shadoweffects.html" />
+    <Content Include="CH04\simplegrid.html" />
+    <Content Include="CH04\Size\Size.html" />
+    <Content Include="CH04\tablet.css" />
+    <Content Include="CH04\TE1.html" />
+    <Content Include="CH04\TE2.html" />
+    <Content Include="CH04\TE3.html" />
+    <Content Include="CH04\TE4.html" />
+    <Content Include="CH04\TE5.html" />
+    <Content Include="CH04\TE6.html" />
+    <Content Include="CH04\Text Alignment\textalignment.html" />
+    <Content Include="CH04\Text Appearance\TextApperance.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CH01\OBJ1.2 - Interact with UI Controls\Media Controls\samplevideo.ogv" />
+    <None Include="CH01\OBJ1.4 - Implement HTML5 API\AppCache\webApp.appcache" />
+    <None Include="CH03\Consume Data\MyJsonData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CH02\Web Worker\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

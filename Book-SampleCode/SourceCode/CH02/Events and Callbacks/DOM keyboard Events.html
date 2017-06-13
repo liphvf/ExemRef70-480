@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div:first-letter {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.onkeydown = function () {
+            
+            if (window.event.altKey && String.fromCharCode(window.event.keyCode) == 'F')
+                document.getElementById("firstNameText").focus();
+
+            if (window.event.altKey && String.fromCharCode(window.event.keyCode) == 'L')
+                document.getElementById("lastNameText").focus();
+            return false;
+        }
+
+        //window.onload = function () {
+
+        //    document.getElementById("firstNameText").addEventListener("keydown", function () {                
+        //      document.getElementById("outputText").innerText = window.event.keyCode;
+        //   });
+
+        //    document.getElementById("firstNameText").addEventListener("keyup", function () {                
+        //       alert(window.event.keyCode);
+        //   });
+
+        //    document.getElementById("firstNameText").addEventListener("keypress", function () {                
+
+        //   });
+            
+        //}
+    </script>
+</head>
+<body>
+    <div>First Name:</div><input type="text" id="firstNameText" />
+    <div>Last Name:</div><input type="text" id="lastNameText" />
+    <!--<label id="outputText"></label>-->
+</body>
+</html>

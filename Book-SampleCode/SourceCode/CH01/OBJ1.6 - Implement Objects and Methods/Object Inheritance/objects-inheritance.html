@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  
+    <script>        
+
+        function Book()
+        {
+            //just creates an  empty book.
+        }
+
+       
+        Book.prototype.ISBN = "";
+        Book.prototype.Length = 350;
+        Book.prototype.genre  = "";
+        Book.prototype.covering  = "";
+        Book.prototype.author  = new Author();
+        Book.prototype.currentPage  = 0;
+        Book.prototype.title  = "";
+                
+               
+        function Author(){
+        }
+       
+        Author.prototype = {
+            firstName:"",
+            lastName:"",
+            gender:"",
+            BookCount: 0
+        }
+
+
+        function PopUpBook() {
+            Book.call(this);
+        }
+        PopUpBook.prototype = Book.prototype;
+        PopUpBook.prototype.hasSound = false;
+        PopUpBook.prototype.showPopUp = function ShowPop() { };
+
+        var p = new PopUpBook();
+        
+        
+        
+        //var popupBook1 = Object.create(Book.prototype,{ hasSound: {value:true}, 
+        //    showPopUp:{ value: function showPop() { 
+        //                                    //do logic to show a popup
+        //                                     }
+        //               }
+        //});
+        
+                       
+    </script>
+</head>
+<body>
+</body>
+</html>

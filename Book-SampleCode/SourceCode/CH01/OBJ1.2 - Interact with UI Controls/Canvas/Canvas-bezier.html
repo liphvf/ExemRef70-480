@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+                        
+            ctxt.beginPath();
+            ctxt.moveTo(125, 20);
+            ctxt.bezierCurveTo(0, 200, 300, 300, 50, 400);
+            ctxt.lineWidth = 5;
+            ctxt.strokeStyle = '#f00';
+            ctxt.stroke();
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+    <canvas id="drawingSurface" width="600" height="400"></canvas>
+</body>
+</html>

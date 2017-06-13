@@ -1,0 +1,46 @@
+﻿ <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var watcher;
+        var geoLocator;
+        window.onload = function () {
+            geoLocator = window.navigator.geolocation;
+            var posOptions = {enableHighAccuracy: true,timeout: 45000};
+
+            watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
+
+        }
+
+        function successPosition(pos) {
+            var sp = document.createElement("p");
+            sp.innerText = "Latitude: " + pos.coords.latitude + " Longitude: " + pos.coords.longitude;
+            document.getElementById("geoResults").appendChild(sp);
+            geoLocator.clearWatch(watcher);
+        }
+
+        function errorPosition(err) {
+            var sp = document.createElement("p");
+            sp.innerText = "error: " + err.message; + " code: " + err.code;
+            document.getElementById("geoResults").appendChild(sp);
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="geoResults">
+        <p>Current Location is:</p>
+        <!--<p>Latitude: 18.25458 Longitude: -90.23658</p>
+        <p>Latitude: 18.2125 Longitude: -90.2125</p>
+        <p>Latitude: 18.20025 Longitude: -90.20025</p>
+        <p>Latitude: 18.1958 Longitude: -90.1958</p>
+        <p>Latitude: 18.14488 Longitude: -90.14488</p>
+        <p>Latitude: 18.22558 Longitude: -90.22558</p>
+        <p>Latitude: 18.10025 Longitude: -90.10025</p>-->
+    </div>
+</body>
+</html>

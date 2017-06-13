@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");            
+            var img = new Image();
+            img.src = "orange.jpg";
+            img.onload = function () {
+                ctxt.drawImage(img, 0, 0);                
+                ctxt.stroke();
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+
+    <canvas id="drawingSurface" width="600" height="400"></canvas>
+</body>
+</html>
+<!--
+
+  ctxt.lineTo(300, 10);
+            ctxt.lineTo(400, 350);
+-->

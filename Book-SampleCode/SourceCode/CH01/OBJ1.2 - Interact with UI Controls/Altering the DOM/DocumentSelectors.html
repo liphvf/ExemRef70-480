@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            //            var paragraphs = document.getElementsByClassName("subPara");
+            //            alert("<p> elements with class subPara: " + paragraphs.length);
+            try {
+                var element = document.getElementById("innerDiv");
+                alert(element.innerHTML);
+                document.removeChild(element);
+                var afterRemove = document.getElementById("innerDiv");
+                alert(afterRemove);
+            } catch (e) {
+                alert(e);
+            }
+
+
+
+            //           var innerDiv = document.getElementById("innerDiv");            
+            //           var newDiv = document.createElement("div");
+            //           for (var i = 0; i < innerDiv.childNodes.length; i++) {
+            //               var anchor = newDiv.appendChild(document.createElement("a"));
+            //               anchor.setAttribute("href", "http://www.bing.ca");
+            //               anchor.text = innerDiv.childNodes[i].textContent;
+            //               newDiv.appendChild(document.createElement("br"));
+            //           }
+            //           innerDiv.replaceNode(newDiv);
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div id="outerDiv">
+            <p class="subPara">Main Paragraph</p>
+            <ul>
+                <li>First List Item</li>
+                <li>Second List Item</li>
+                <li>Third List Item</li>
+                <li>Fourth List Item</li>
+            </ul>
+            <div id="innerDiv" >
+                <p class="subPara" id="P1">Paragraph 1</p>
+                <p class="subPara" id="P2">Paragraph 2</p>
+                <p class="subPara" id="P3">Paragraph 3</p>
+                <p class="subPara" id="P4">Paragrpah 4</p>
+            </div>
+
+            <table id="theTable">
+                <tr>
+                    <td>Row 1
+                    </td>
+                </tr>
+                <tr>
+                    <td>Row 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>Row 3
+                    </td>
+                </tr>
+                <tr>
+                    <td>Row 4
+                    </td>
+                </tr>
+                <tr>
+                    <td>Row 5
+                    </td>
+                </tr>
+            </table>
+
+            <input type="text" /><input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>

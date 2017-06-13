@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            document.getElementById("aRange").addEventListener("change", rangeChangeEvent);
+            document.getElementById("aText").addEventListener("change", rangeChangeEvent);
+        }
+
+        function rangeChangeEvent() {
+            document.getElementById("rangeValue").innerText = this.value;        
+        }
+
+        
+
+
+    </script>
+</head>
+    
+<body>    
+    <input id="aRange" type="range" max="200" min="0" value="0" />
+    <input id="aText" type="text" />
+    <div id="rangeValue"></div>
+</body>
+</html>
