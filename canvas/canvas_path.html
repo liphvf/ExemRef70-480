@@ -10,14 +10,20 @@
     </style>
 
     <script>
+
+        // Note que no exemplo abaixo, podemos criar um cursor único para desenhar. A cada beginPath é como se tiressa a ponta do lápis e posiciona-se novamente, então caso não tire e continue desenhando, você vai ver uma linha continua que acaba ao chamar o stroke.
         window.onload = function () {
             var drawingSurface = document.getElementById("drawingSurface");
             var ctxt = drawingSurface.getContext("2d");
 
             ctxt.beginPath();
+            // Not aqui ele desenhara o arco de baixo da cabeça
             ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            // Cria uma linha para cima
             ctxt.lineTo(150, 125);
+            // Faz o semi-arco de cima
             ctxt.quadraticCurveTo(300, 0, 450, 125);
+            // Fecha o chapeu de volta para o arco
             ctxt.lineTo(353, 144);
             ctxt.strokeStyle = "blue";
             ctxt.lineCap = "round";

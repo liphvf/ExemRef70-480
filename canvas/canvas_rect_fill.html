@@ -1,0 +1,63 @@
+<html>
+<!-- Melhor fonte de entendimento: https://www.w3schools.com/tags/canvas_beziercurveto.asp-->
+
+<head>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+
+            // ctxt.beginPath();
+            // ctxt.rect(300, 200, 150, 75);
+            // ctxt.stroke();
+
+            // ctxt.beginPath();
+            // var x, y;
+            // x = 150;
+            // y = 75;
+            // // Centralizando
+            // ctxt.rect(300 - (x / 2), 200 - (y / 2), x, y);
+            // ctxt.stroke();
+            // ctxt.fillStyle = "blue";
+            // ctxt.fill()
+
+            // ctxt.beginPath();
+            // var x, y;
+            // x = 150;
+            // y = 75;
+            // ctxt.fillStyle = "blue";
+            // // Esse method cria e preenche o retangulo
+            // ctxt.fillRect(300 - (x / 2), 200 - (y / 2), x, y);
+
+
+            ctxt.beginPath();
+            ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            ctxt.lineTo(150, 125);
+            ctxt.quadraticCurveTo(300, 0, 450, 125);
+            ctxt.lineTo(353, 144);
+            ctxt.strokeStyle = "blue";
+            ctxt.lineCap = "round";
+            ctxt.lineWidth = 10;
+            // Note que ele sempre pinta preenchendo, ou seja, caso a figura não esteja fechada ele completa.
+            ctxt.fillStyle = "Green";
+            ctxt.fill();
+            ctxt.stroke();
+        }
+    </script>
+
+</head>
+
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+</body>
+
+</html>
