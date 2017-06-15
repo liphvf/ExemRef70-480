@@ -28,3 +28,8 @@ Note que ele está sendo usado como o topo de `</article>`
 - The <aside> element defines any content that doesn’t fall within the main flow or main content of the current page—for example, a sidebar, a note, an alert, or an advertisement. 
 
 - Note que o <aside> só tem valor semantico, para dizer que será colocado ao lado, depois que aplicarmos uma css para colocar ele em seu lugar.
+
+---
+
+
+Para criar figuras na telas, caso tenha que destruir e reconstruir é mais barato o canvas, porem caso tenha que manipular o mesmo objeto, mudando sua forma ou localidade, seria por svg.
