@@ -15,7 +15,7 @@
             var ctxt = drawingSurface.getContext("2d");                        
             ctxt.lineWidth = 3;            
             ctxt.rect(150, 150, 200, 125);
-            var gradient = ctxt.createRadialGradient(150, 150, 200, 125);
+            var gradient = ctxt.createLinearGradient(150, 150, 200, 125);
             gradient.addColorStop(0, "Green");
             gradient.addColorStop(0.5, "Red");
             gradient.addColorStop(1,"Blue");
