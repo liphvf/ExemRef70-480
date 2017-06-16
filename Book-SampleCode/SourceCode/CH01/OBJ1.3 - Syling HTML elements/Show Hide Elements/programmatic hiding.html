@@ -1,18 +1,41 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
     <script>
-        window.onload = function () {            
-            document.getElementById("btnHideAnElement").onclick = function () {                
-                document.getElementById("innerDiv").style.visibility = "visible";
-                document.getElementById("row2").style.visibility = "collapse";
-            }            
+        // Abordagem 1: Está ele remove o espaço destes elementos
+        // window.onload = function () {
+        //     document.getElementById("btnHideAnElement").onclick = function () {
+        //         if (document.getElementById("innerDiv").style.display == 'inline') {
+        //             document.getElementById("innerDiv").style.display = 'none';
+        //         }
+        //         else {
+        //             document.getElementById("innerDiv").style.display = 'inline';
+        //         }
+        //     }
+        // }
+        // Abordagem 2:  Está ele oculta o elemento porem mantem o espaço onde ele existia
+        window.onload = function () {
+            document.getElementById("btnHideAnElement").onclick = function () {
+
+                if (document.getElementById("innerDiv").style.visibility === "visible") {
+
+                    document.getElementById("innerDiv").style.visibility = "collapse";
+                    document.getElementById("row2").style.visibility = "visible";
+
+                } else {
+
+                    document.getElementById("innerDiv").style.visibility = "visible";
+                    document.getElementById("row2").style.visibility = "collapse";
+                }
+            }
         }
     </script>
 </head>
+
 <body>
     <form>
         <div id="outerDiv">
@@ -23,7 +46,16 @@
                 <li>Third List Item</li>
                 <li>Fourth List Item</li>
             </ul>
-            <div id="innerDiv"  style="visibility: collapse">
+            <!--Abordagem 1: Está ele remove o espaço destes elementos-->
+            <!--<div id="innerDiv">
+                <p class="subPara" id="P1">Paragraph 1</p>
+                <p class="subPara" id="P2">Paragraph 2</p>
+                <p class="subPara" id="P3">Paragraph 3</p>
+                <p class="subPara" id="P4">Paragrpah 4</p>
+            </div>-->
+
+            <!--Abordagem 2: Está ele oculta o elemento porem mantem o espaço onde ele existia-->
+            <div id="innerDiv" style="visibility: collapse">
                 <p class="subPara" id="P1">Paragraph 1</p>
                 <p class="subPara" id="P2">Paragraph 2</p>
                 <p class="subPara" id="P3">Paragraph 3</p>
@@ -35,7 +67,7 @@
                     </td>
                 </tr>
                 <tr id="row2">
-                    <td >Row 2
+                    <td>Row 2
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +87,8 @@
             <input type="text" /><input type="submit" value="Submit" />
         </div>
         <br />
-        <button type="button" id="btnHideAnElement" >Show/Hide Element</button>
+        <button type="button" id="btnHideAnElement">Show/Hide Element</button>
     </form>
 </body>
+
 </html>

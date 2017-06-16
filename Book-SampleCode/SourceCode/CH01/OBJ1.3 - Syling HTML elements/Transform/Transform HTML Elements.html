@@ -1,35 +1,60 @@
 ﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <style>        
+    <style>
         #orange1 {
             height: 75px;
-            width: 112px;       
-            top:75px;  
-            left: 100px;   
+            width: 112px;
+            top: 75px;
+            left: 100px;
         }
-            
-        .rota {             
-            transform: rotateX(180deg);
+
+        .rota {
+            transform: rotate(90deg);
+        }
+
+        .trans {
+            transform: scale(2)
+        }
+
+        .translate {
+            transform: translate(100px, 0);
         }
     </style>
     <script>
         window.onload = function () {
 
-            document.getElementById("orange1").onclick = function () {                
-                
+            document.getElementById("orange1").onclick = function () {
                 this.classList.add("rota");
             }
 
         }
 
+        function Reset() {
+            document.getElementById("orange1").classList.remove("rota", "trans", "translate");
+        }
+
+        function Escale() {
+            document.getElementById("orange1").classList.add("trans");
+        }
+
+        function Translate() {
+            document.getElementById("orange1").classList.add("translate");
+        }
     </script>
 </head>
+
 <body>
     <!--Neste caso ele está dicionando o atributo class="rota" a imagem abaixo.-->
-    <img id="orange1" class="rota" src="orange.jpg" style="position:relative" />
+    <img id="orange1" src="orange.jpg" style="position:relative" />
+
+    <div><input type="button" id="reset" value="Reset" onclick="Reset()" /></div>
+    <div><input type="button" id="scale" value="Scale" onclick="Escale()" /></div>
+    <div><input type="button" id="translate" value="Translate" onclick="Translate()" /></div>
 
 </body>
+
 </html>
