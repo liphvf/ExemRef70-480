@@ -1,38 +1,41 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
-     <script>
-         var watcher;
-         var geoLocator;
-         var positions = 0;
+    <script>
+        var watcher;
+        var geoLocator;
+        var positions = 0;
 
-         window.onload = function () {
+        window.onload = function () {
 
-             geoLocator = window.navigator.geolocation;
-             var posOptions = { enableHighAccuracy: true, timeout: 45000 };
-             watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
+            geoLocator = window.navigator.geolocation;
+            var posOptions = { enableHighAccuracy: true, timeout: 45000 };
+            watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
+        }
 
-         }
+        function successPosition(pos) {
+            var local = new Object();
+            local.latitude = pos.coords.latitude;
+            local.longitude = pos.coords.longitude;
 
-         function successPosition(pos) {
-             //on each position, store it into local storage sequentially. THen it can be retreived sequentially
-             //in order to redraw the route on a map.
-             var p = "Lat: " + pos.coords.latitude + " Long: " + pos.coords.longitude;
-             localStorage.setItem(position, p);             
-             
-         }
-         function errorPosition(err) {
-             var sp = document.createElement("p");
-             sp.innerText = "error: " + err.message; + " code: " + err.code;
-             document.getElementById("geoResults").appendChild(sp);
-         }
-
+            localStorage.setItem(pos.timestamp, JSON.stringify(local));
+        }
+        function errorPosition(err) {
+            var sp = document.createElement("p");
+            sp.innerText = "error: " + err.message; + " code: " + err.code;
+            document.getElementById("geoResults").appendChild(sp);
+        }
     </script>
 </head>
+
 <body>
 
+    <div id="geoResults"></div>
+
 </body>
+
 </html>

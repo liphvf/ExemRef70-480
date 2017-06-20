@@ -1,13 +1,14 @@
-﻿ <!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
     <script>
         window.onload = function () {
             var geoLocator = window.navigator.geolocation;
-            var posOptions = {enableHighAccuracy: true,timeout: 45000};
+            var posOptions = { enableHighAccuracy: true, timeout: 45000 };
 
             geoLocator.getCurrentPosition(successPosition, errorPosition, posOptions);
 
@@ -15,16 +16,20 @@
 
         function successPosition(pos) {
             var sp = document.createElement("p");
-            sp.innerText = "Latitude: " + pos.coords.latitude + " Longitude: " + pos.coords.longitude;            
+            sp.innerText = "Latitude: " + pos.coords.latitude + " Longitude: " + pos.coords.longitude;
+
+            var tempo =document.createElement("p");
+            tempo.innerText = "Ultima consulta executada em: " + pos.timestamp;
             document.getElementById("geoResults").appendChild(sp);
+            document.getElementById("geoResults").appendChild(tempo);
         }
 
         function errorPosition(err) {
-            alert(err);
+            alert(err.message);
         }
-
     </script>
 </head>
+
 <body>
 
     <div id="geoResults">
@@ -32,4 +37,5 @@
         <!--<p>Latitude: 18.25458 Longitude: -90.23658</p>-->
     </div>
 </body>
+
 </html>
