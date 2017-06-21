@@ -33,3 +33,22 @@ Note que ele está sendo usado como o topo de `</article>`
 
 
 Para criar figuras na telas, caso tenha que destruir e reconstruir é mais barato o canvas, porem caso tenha que manipular o mesmo objeto, mudando sua forma ou localidade, seria por svg.
+
+
+Para evitar colisões de namespace um padrão que pode ser adotado é usar seu namespace ao contrário, exemplo com.microsoft:
+
+```
+
+var com = {};
+com.Bookstore = {};
+com.Bookstore.Book = {
+title: 'my book',
+genre: 'fiction'
+};
+com.Bookstore.Author = {
+firstName: 'R',
+lastName: 'D'
+}
+```
+
+- Observe o escopo do this, ele se referencia ao elemento em que você está.

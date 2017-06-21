@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -13,11 +14,11 @@
     </style>
     <script>
         var globalvar = "global";
-
+        
         window.onload = function () {
             var localVar = "local";
             var scaleX = 0.0;
-            
+
             document.getElementById("Div1").onclick = function () {
                 var insideDiv1Click = "insideDiv1";
                 alert(globalvar);
@@ -30,7 +31,7 @@
                 alert(insideDiv1Click);
             }
             document.getElementById("Div3").onclick = function () {
-                var indsideDiv3 = "Div3";
+                var insideDiv3 = "Div3";
                 AFunction();
                 BFunctionWithParam(insideDiv3);
             }
@@ -54,13 +55,14 @@
                 //code to scale the Div by a factor of scaleX
             }
         }
-
     </script>
 </head>
-<body>    
+
+<body>
     <div id="Div1"></div>
     <div id="Div2"></div>
     <div id="Div3"></div>
     <div id="Div4"></div>
 </body>
+
 </html>
