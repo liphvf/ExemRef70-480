@@ -52,3 +52,4 @@ lastName: 'D'
 ```
 
 - Observe o escopo do this, ele se referencia ao elemento em que você está.
+-  Custom objects are created by the developer, whereas native objects are provided by core JavaScript.
