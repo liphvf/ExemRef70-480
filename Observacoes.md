@@ -144,3 +144,31 @@ var splicedItems = sports.splice(1, 3, 'golf', 'curling', 'darts'); // Substitui
 
 ## pop and push 
 retira e adiciona da lista, sempre retirado o final e adiciona no final.
+
+## shift unshift
+Oposto ao pop e push que remove e adiciona no final da lista, este faz no inicio da lista e retorna o indice no caso de adicionar ou o item que  foi removido.
+
+```
+var sports = new Array();
+sports.unshift('soccer', 'basketball', 'hockey');
+sports.unshift('football');
+var nextSport = sports.shift();
+```
+
+
+Taken together, the two concepts you’ve just seen (pop/push and shift/unshift) can be
+combined to create the concept of a first-in-first-out queue:
+
+```
+var sports = new Array();
+sports.push('soccer');
+sports.push('basketball');
+sports.push('hockey');
+var get1 = sports.shift();
+sports.push('golf');
+var get2 = sports.shift();
+```
+
+
+## Every e Some:
+Every executa o call back e sai o primeiro false e o some sai no primeiro true.

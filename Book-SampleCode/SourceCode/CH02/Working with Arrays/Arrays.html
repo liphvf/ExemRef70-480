@@ -117,18 +117,18 @@
         //array method with callbacks
         //sports.every();
 
-        //var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
-        //var allEven = evenNumbers.every(evenNumberCheck, evenNumbers);
-        //if (allEven) {
-        //    document.write("All even");
-        //} else {
-        //    document.write("not all even.");
-        //}
+        var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        var allEven = evenNumbers.every(evenNumberCheck, evenNumbers);
+        if (allEven) {
+           document.write("All even");
+        } else {
+           document.write("not all even.");
+        }
 
-        //function evenNumberCheck(value, index, array) {
+        function evenNumberCheck(value, index, array) {
             
-        //    return (value % 2) == 0;
-        //}
+           return (value % 2) == 0;
+        }
 
         //sports.some();
 
