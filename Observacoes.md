@@ -90,7 +90,7 @@ anArray[9] = ‘soccer’;
 alert(anArray.length);
 ```
 
-### Concante
+### Concant
 
 ```
 var sports = new Array( 'football', 'cricket', 'rugby', 'tennis', 'badminton');
@@ -172,3 +172,110 @@ var get2 = sports.shift();
 
 ## Every e Some:
 Every executa o call back e sai o primeiro false e o some sai no primeiro true.
+
+## ForEach
+
+```
+var sportsArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby'];
+
+sportsArray.forEach(offerSport);
+// sportsArray.sort().forEach(offerSport); Poderiamos organizar por ordem alfabetica antes de executar o foreach
+
+function offerSport(value, index, array) {
+
+var sportsList = document.getElementById("sportsList");
+
+var bullet = document.createElement("li");
+
+bullet.innerText = value;
+
+sportsList.appendChild(bullet);
+
+}
+
+
+```
+
+## Filter
+
+```
+var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+
+var allEven = evenNumbers.filter(evenNumberCheck, evenNumbers);
+
+//work with the even numbers....
+function evenNumberCheck(value, index, array) {
+return (value % 2) == 0;
+}
+
+```
+
+
+## Map
+
+```
+
+var money = [12.8, 15.9, 21.7, 35.2];
+var roundedMoney = money.map(roundOff, money);
+…
+function roundOff(value, position, array) {
+return Math.round(value);
+}
+
+```
+
+## reduce and reduceRight 
+he reduce and reduceRight methods are recursive. Each result of the callback function is
+passed back into the callback method as the previous return value along with the current
+element to be passed in. This provides some interesting scenarios. The reduce method pro-
+cesses the elements of the array in ascending order, whereas the reduceRight processes the
+elements of the array in descending order. The following example demonstrates using the
+reduce method to calculate a factorial:
+
+```
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var factorials = numbers.reduce(factorial);
+function factorial(previous, current) {
+return previous * current;
+}
+```
+Nesse caso a cima ele ira passar por cada número, executar fatorial, e gravar o resultado dele no proximo previuous. Exemplo.
+- 1 - Execução:
+    - 1* 2 = **2**;
+- 2 - Execução:
+    - 3 * **2** = 5;
+
+## for loop
+
+```
+for (var i = 0; i < 10; i++) {
+document.write(i);
+}
+```
+## for in loop
+```
+var person = { firstName: "Jane", lastName: "Doe", birthDate: "Jan 5, 1925", gender:
+"female" };
+for (var prop in person) {
+document.write(person[prop]);
+}   
+```
+
+## While
+```
+
+var i = 0;
+while (i < 10) {
+//do some work here.
+i++;
+}
+```
+
+## do .. while
+```
+
+var canvas = document.getElementById("canvas1");
+do {
+//stop traffic
+}while(canvas.styles.backgroundColor == 'red')
+```
