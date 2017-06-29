@@ -57,26 +57,20 @@
            
        //}
 
-       window.addEventListener("load", function () {
-           document.getElementById("outer").addEventListener("click", outerDivClick, false);
-       }, false);
+    //    window.addEventListener("load", function () {
+    //        document.getElementById("outer").addEventListener("click", outerDivClick, false);
+    //    }, false);
 
-       window.removeEventListener("load", function () {
-           document.getElementById("outer").addEventListener("click", outerDivClick, false);
-       }, false);
-       //window.onload = function () {
-       //}
+    //    window.removeEventListener("load", function () {
+    //        document.getElementById("outer").addEventListener("click", outerDivClick, false);
+    //    }, false);
+    //    //window.onload = function () {
+    //    //}
 
-
-       //window.onload = function () {
-       //    document.getElementById("outer").addEventListener("click", outerDivClick, false);
-       //    document.getElementById("middle").addEventListener("click", middleDivClick, false);
-       //    document.getElementById("inner").addEventListener("click", innerDivClick, false);
-       //    document.getElementById("clearButton").addEventListener("click", clearList);
-       //}
 
        function outerDivClick() {
            appendText("outer Div Clicked");
+           console.log("object");
        }
 
        function middleDivClick() {
@@ -85,8 +79,12 @@
 
        function innerDivClick() {
            appendText("inner Div Clicked");
-           window.event.cancelBubble = true;
+        //    window.event.cancelBubble = true;
        }
+       
+          window.addEventListener("load", outerDivClick, true);
+          window.addEventListener("load", middleDivClick, false);
+          window.addEventListener("load", innerDivClick, false);
 
        function appendText(s) {
            var li = document.createElement("li");
