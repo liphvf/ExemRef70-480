@@ -285,3 +285,7 @@ do {
 Primeiro roda o focus depois o focusin.
 Focus > Focusin
 Blur > Focusout
+
+## keydown, keypress, keyup
+
+O evento de keydown e keypress são similiares, porem o keydown vem antes e em algumas teclas o que press não funciona, exemplo: `Ctrl`, `Shift`  e qual quer combinações destes.
