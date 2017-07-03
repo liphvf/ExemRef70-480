@@ -279,3 +279,9 @@ do {
 //stop traffic
 }while(canvas.styles.backgroundColor == 'red')
 ```
+
+## Focus, Blur, Focusin, Focusout
+
+Primeiro roda o focus depois o focusin.
+Focus > Focusin
+Blur > Focusout
