@@ -1,35 +1,55 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
     <style>
-        html, body {
+        html,
+        body {
+            margin: 0 auto;
             width: 100%;
             height: 100%;
         }
 
         .scale {
-            transform:scale(1.5);
+            transform: scale(1.5);
         }
     </style>
     <script>
+        // window.onload = function () {
+        //     document.getElementById("yellowBox").addEventListener("mouseenter", yellowBoxEnter);
+        //     document.getElementById("yellowBox").addEventListener("mouseleave", yellowBoxLeave);
+        // }
+
+        // function yellowBoxEnter() {
+        //     this.classList.add("scale");
+        // }
+
+        // function yellowBoxLeave() {
+        //     this.classList.remove("scale");
+        // }
+
         window.onload = function () {
-            document.getElementById("yellowBox").addEventListener("mouseenter", yellowBoxEnter);
-            document.getElementById("yellowBox").addEventListener("mouseleave", yellowBoxLeave);
+            document.getElementById("yellowBox").addEventListener("click", yellowBoxClick);
         }
-
-        function yellowBoxEnter() {
-            this.classList.add("scale");
+        function yellowBoxClick() {
+            document.write("Client X: " + window.event.clientX + " ClientY: "
+                + window.event.clientY);
+            document.write("<BR />");
+            document.write("offsetX: " + window.event.offsetX + " offsetY: "
+                + window.event.offsetY);
+            document.write("<BR />");
+            document.write("screen X: " + window.event.screenX + " screenY: "
+                + window.event.screenY);
         }
-
-        function yellowBoxLeave() {
-            this.classList.remove("scale");
-        }
+        
     </script>
 </head>
+
 <body>
-       <div id="yellowBox" style="width: 50%;height:50%;margin: 0 auto;background-color:yellow;"></div>
+    <div id="yellowBox" style="width: 50%;height:50%;margin: 0 auto;background-color:yellow;"></div>
 </body>
+
 </html>
