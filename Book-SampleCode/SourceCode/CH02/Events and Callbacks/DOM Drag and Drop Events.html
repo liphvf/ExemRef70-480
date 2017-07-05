@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -10,7 +11,7 @@
             var b2 = document.getElementById("bucket2");
             var b3 = document.getElementById("bucket3");
             var chip = document.getElementById("chip");
-           
+
             chip.addEventListener("dragstart", function () { window.event.dataTransfer.setData("Text", this.id); });
 
             b1.addEventListener("dragenter", function () { b1.classList.add("over"); window.event.returnValue = false; });
@@ -22,7 +23,7 @@
                 var d = document.getElementById(data);
                 d.classList.remove("begin");
                 d.classList.add("dropped");
-                this.appendChild(d);                
+                this.appendChild(d);
             });
 
             b2.addEventListener("dragenter", function () { b2.classList.add("over"); window.event.returnValue = false; });
@@ -47,8 +48,8 @@
                 d.classList.remove("begin");
                 d.classList.add("dropped");
                 this.appendChild(d);
-            });            
-            
+            });
+
         }
     </script>
     <style>
@@ -57,56 +58,60 @@
             height: 50%;
             position: relative;
             top: 25%;
-            left: 25%;    
-            background-color:black;        
+            left: 25%;
+            background-color: black;
         }
+
         .over {
             transform: scale(1.1);
         }
-        
+
         .bucket {
             width: 100px;
             height: 100px;
-            margin: 10px 10px 10px 10px; 
-            position:absolute;           
+            margin: 10px 10px 10px 10px;
+            position: absolute;
         }
+
         .chip {
-            width:20px;
-            height:20px;
-            position:absolute;
-             
+            width: 20px;
+            height: 20px;
+            position: absolute;
         }
+
         div:first-of-type {
             background-color: red;
-            
         }
+
         div:nth-of-type(2) {
             background-color: green;
-            left:25%;
+            left: 25%;
         }
+
         div:nth-of-type(3) {
             background-color: blue;
-            left:50%;
+            left: 50%;
         }
 
         #chip {
-            background-color: black; 
-            width:50px;
-            height:50px;                      
+            background-color: black;
+            width: 50px;
+            height: 50px;
         }
 
         .begin {
-            position:absolute;
+            position: absolute;
             left: 150px;
             top: 150px;
         }
-        
     </style>
 </head>
-<body>    
-    <div id="bucket1" class="bucket"></div> 
+
+<body>
+    <div id="bucket1" class="bucket"></div>
     <div id="bucket2" class="bucket"></div>
     <div id="bucket3" class="bucket"></div>
     <div id="chip" class="begin" draggable="true"></div>
 </body>
+
 </html>
