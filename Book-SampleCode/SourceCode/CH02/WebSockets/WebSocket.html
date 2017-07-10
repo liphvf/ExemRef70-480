@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
 </head>
 <script type="text/javascript">
-
     window.onload = function () {
 
-        
+
         var wsConnection;
         var chatBox = document.getElementById("chatWindow");
 
@@ -25,7 +25,7 @@
         connectButton.onclick = function () {
             //Or the use of wss for secure WebSockets. IE: wss://studygroup.70480.com
             //Opens the WebSocket
-            wsConnection=  new WebSocket('ws://studygroup.70480.com', ['soap', 'xmpp']);
+            wsConnection = new WebSocket('ws://localhost:8080', ['soap', 'xmpp']);
         }
 
         sendButton.onclick = function () {
@@ -39,16 +39,16 @@
 
             //show message in chat window.
             NewLine();
-            chatBox.value = chatBox.value + "You: " + msgToSend.value;
+            chatBox.value = chatBox.value + "You: " + msgToSend.value + "\n";
 
             //clear message text box
             msgToSend.value = '';
         }
 
         // event handler for when the WebSocket connection is established
-        wsConnection.onopen = function () {            
-            
-            chatBox.textContent = chatBox.textContent +  "System: Connection has been established";
+        wsConnection.onopen = function () {
+
+            chatBox.textContent = chatBox.textContent + "System: Connection has been established";
         }
 
         //event handler for when the WebSocket encounters an error
@@ -72,13 +72,14 @@
 
 
         //helper functions.
-        function NewLine()
-        {            
+        function NewLine() {
             chatBox.textContent = chatBox.textContent + '\r\n';
         }
 
     }
+
 </script>
+
 <body>
     <div align="center">
         <div>
@@ -98,4 +99,5 @@
         </div>
     </div>
 </body>
+
 </html>
