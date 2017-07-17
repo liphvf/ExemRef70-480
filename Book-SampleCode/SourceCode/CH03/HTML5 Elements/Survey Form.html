@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -13,7 +14,9 @@
 
 <script src="jquery-2.0.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+
 </script>
+
 <body>
     <form>
         <div>
@@ -54,7 +57,9 @@
             <tr>
                 <td>Your favorite website:</td>
                 <td>
-                    <input type="url" />
+                    <!-- <input type="url" /> -->
+                    <!--O exemplo a baixa só permite domain com .com e .ca de acordo com a regex.  -->
+                    <input type="text" title="Only .com and .ca are permitted." pattern="^[a-zA-Z0-9\-\.]+\.(com|ca)$" />
                 </td>
             </tr>
             <tr>
@@ -66,32 +71,22 @@
                 <td>What colors have you colored your hair:
                 </td>
                 <td>
-                    <input type="checkbox" id="chkBrown" checked="checked" />
-                    Brown
-                    <input type="checkbox" id="chkBlonde" />
-                    Blonde
-                    <input type="checkbox" id="chkBlack" />
-                    Black
-                    <input type="checkbox" id="chkRed" />
-                    Red
-                    <input type="checkbox" id="chkNone" />
-                    None
+                    <input type="checkbox" id="chkBrown" checked="checked" /> Brown
+                    <input type="checkbox" id="chkBlonde" /> Blonde
+                    <input type="checkbox" id="chkBlack" /> Black
+                    <input type="checkbox" id="chkRed" /> Red
+                    <input type="checkbox" id="chkNone" /> None
                 </td>
             </tr>
             <tr>
                 <td>Rate your experience:
                 </td>
                 <td>
-                    <input type="radio" id="chkOne" name="experience" />
-                    1 - Very Poor
-                    <input type="radio" id="chkTwo" name="experience" />
-                    2
-                    <input type="radio" id="chkThree" name="experience" />
-                    3 
-                    <input type="radio" id="chkFour" name="experience" />
-                    4 
-                    <input type="radio" id="chkFive" name="experience" checked="checked" />
-                    5 - Very Good
+                    <input type="radio" id="chkOne" name="experience" /> 1 - Very Poor
+                    <input type="radio" id="chkTwo" name="experience" /> 2
+                    <input type="radio" id="chkThree" name="experience" /> 3
+                    <input type="radio" id="chkFour" name="experience" /> 4
+                    <input type="radio" id="chkFive" name="experience" checked="checked" /> 5 - Very Good
                 </td>
             </tr>
             <tr>
@@ -117,7 +112,7 @@
                 <td>
                     <input type="email" placeholder="me@mydomain.com" required />
                 </td>
-            </tr>
+            </tr>z
             <tr>
                 <td>
                     <input type="submit" />
@@ -128,4 +123,5 @@
         </table>
     </form>
 </body>
+
 </html>
