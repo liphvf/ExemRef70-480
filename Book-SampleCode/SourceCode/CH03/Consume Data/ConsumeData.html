@@ -1,19 +1,20 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
 
     <script src="jquery-2.0.3.min.js" type="text/javascript"></script>
-    
-    
+
+
     <script>
         $("document").ready(function () {
             $("#btnGetXMLData").click(function () {
                 try {
                     var xReq = new XMLHttpRequest();
-                    xReq.timeout = 2000;
+                    // xReq.timeout = 2000; Caso deixa essa linha está retornando erro.
                     xReq.ontimeout = function () {
                         $("#results").text("Request Timed out");
                     }
@@ -21,8 +22,7 @@
                     xReq.send(null);
                     $("#results").text(xReq.response);
 
-                }catch(e)
-                {
+                } catch (e) {
                     alert(e.message);
                 }
             });
@@ -33,7 +33,7 @@
 
                     var xReq = new XMLHttpRequest();
                     xReq.open("GET", "myXMLData.xml", false);
-                    xReq.timeout = 2000;
+                    // xReq.timeout = 2000;
                     xReq.ontimeout = function () {
                         $("#results").text("Request Timed out");
                     }
@@ -47,7 +47,7 @@
                         }
                     }
                     xReq.send(null);
-                    
+
 
                 } catch (e) {
                     alert(e.message);
@@ -55,7 +55,7 @@
             });
 
 
-               $("#btnGetJSONDat a").click(function () {
+            $("#btnGetJSONDat a").click(function () {
                 try {
                     var XMLHTTPReadyState_COMPLETE = 4;
 
@@ -86,9 +86,10 @@
 </head>
 
 <body>
-    <button id="btnGetXMLData" >Get XML Data</button>
-    <button id="btnGetXMLDataAsync" >Get XML Data Async</button>
-    <button id="btnGetJSONData" >Get JSON Data Async</button>
+    <button id="btnGetXMLData">Get XML Data</button>
+    <button id="btnGetXMLDataAsync">Get XML Data Async</button>
+    <button id="btnGetJSONData">Get JSON Data Async</button>
     <div id="results"></div>
 </body>
+
 </html>

@@ -1,16 +1,16 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
-   
+
 </head>
 <script src="jquery-2.0.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-    
     function CheckString() {
-        try{
+        try {
             var s = $('#regExString').val();
             var regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
             if (regExpression.test(s))
@@ -28,7 +28,7 @@
             var s = $('#regExString').val();
             var regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
             var results = regExpression.exec(s);
-            if(results != null)
+            if (results != null)
                 alert("Valid postal code." + results[0]);
             else
                 alert("Invalid postal code.");
@@ -37,13 +37,15 @@
         }
 
     }
+
 </script>
+
 <body>
     <form>
         <input type="text" id="regExString" />
-        <button onclick="CheckString();" >Evaluate with Test</button>
-        <button onclick="CheckStringExec();" >Evaluate with Exec</button>
+        <button onclick="CheckString();">Evaluate with Test</button>
+        <button onclick="CheckStringExec();">Evaluate with Exec</button>
     </form>
-    <iframe sandbox
-</body>
+    <iframe sandbox /> </body>
+
 </html>

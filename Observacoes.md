@@ -295,3 +295,9 @@ O evento de keydown e keypress são similiares, porem o keydown vem antes e em a
 Static data is written directly into the HTML markup
 Dynamic data can change, loaded by code such as JavaScript
 
+---- 
+
+`isNaN()` function provides a way to evaluate whether the value passed into it isn’t a
+number.
+`isFinite()` function is used in
+the same way but returns true if the value is a finite number and false if it’s not.
