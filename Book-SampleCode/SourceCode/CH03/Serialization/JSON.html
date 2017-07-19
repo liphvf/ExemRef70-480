@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -13,12 +14,12 @@
             $("#btnSendXMLData").click(function () {
                 try {
 
-                    var xmlData = "<Person firstname='Rick' lastName='Delorme' hairColor='Brown' eyeColor='Brown' /> ";
+                    var xmlData = "<Person firstname='Rick' lastName='Delorme' hairColor='Brown' eyeColor='Brown' />";
 
                     var xReq = new XMLHttpRequest();
 
                     xReq.open("POST", "/ReceiveXMLData.aspx", false);
-                    xReq.responseType
+                    // xReq.responseType = "application/json";
                     xReq.send(xmlData);
 
 
@@ -45,20 +46,21 @@
 
                 req.open("GET", "MyJsonData.json", false);
                 req.send(null);
-                
+
                 var jsonPerson = JSON.parse(req.responseText);
-                                
+
             });
-            
+
 
         });
     </script>
 </head>
 
 <body>
-    <button id="btnGetXMLData">Send XML Data</button>    
+    <button id="btnGetXMLData">Send XML Data</button>
     <button id="btnJSONPerson">JSON Serialization</button>
     <button id="btnJSONDeserialize">JSON deserialization</button>
     <div id="result"></div>
 </body>
+
 </html>

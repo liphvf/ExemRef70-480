@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -15,13 +16,13 @@
 
                     var xReq = new XMLHttpRequest();
 
-                    xReq.open("GET", "orange.jpg", false);
+                    xReq.open("GET", "orange.jpg", true);
                     xReq.responseType = 'blob'
                     xReq.send(null);
 
-                    
+
                     var blob = xReq.response;
-                    
+
                     document.getElementById("result").src = URL.createObjectURL(blob);
 
                 } catch (e) {
@@ -32,8 +33,6 @@
 
             $("#btnSubmitBinaryData").click(function () {
                 try {
-                    
-                    
 
                     var xReq = new XMLHttpRequest();
 
@@ -41,21 +40,21 @@
                     xReq.responseType = 'blob'
                     xReq.send(data);
 
-
                 } catch (e) {
                     alert(e.message);
                 }
             });
 
-          
+
         });
     </script>
 </head>
 
 <body>
-    
+
     <button id="btnGetBinaryData">Get Imgage</button>
     <button id="btnSubmitBinaryData">Send Imgage</button>
     <img id="result" src="" />
 </body>
+
 </html>
