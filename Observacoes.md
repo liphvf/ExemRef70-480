@@ -301,3 +301,13 @@ Dynamic data can change, loaded by code such as JavaScript
 number.
 `isFinite()` function is used in
 the same way but returns true if the value is a finite number and false if it’s not.
+
+
+# CSS
+
+## font-weight
+Valores possíveis:
+
+- 100 à 900
+- lighter, normal, bold, and bolder.
+
