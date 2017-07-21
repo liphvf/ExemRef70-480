@@ -311,3 +311,6 @@ Valores possíveis:
 - 100 à 900
 - lighter, normal, bold, and bolder.
 
+## font-size
+xx-small, x-small, small, smaller, medium, larger, large,
+x-large, xx-large
