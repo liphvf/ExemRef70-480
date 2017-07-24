@@ -1,57 +1,79 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title></title>
 
     <style>
-        #flexbox1 {
-            display: -ms-flexbox;   
+        /* #flexbox1 {
+            display: -ms-flexbox;
             -ms-flex-flow: row;
-            -ms-flex-wrap: wrap;           
+            -ms-flex-wrap: wrap;
             border: 1px solid black;
             margin-top: 100px;
             min-height: 15px;
             width: 200px;
+        } */
+
+        #flexbox1 {
+            display: flex;
+            border: 1px solid black;
+            margin-top: 100px;
+            min-height: 15px;
+            min-width: 200px;
+            max-width: 460px;
+            flex-direction: column;
+            -ms-flex-pack: center;
         }
 
-             #flexbox1 > div {
-                min-width: 80px;
-                min-height: 80px;
-                border: 1px solid black;
-                margin: 5px;
-            }
+        #flexbox1>div {
+            min-width: 80px;
+            min-height: 80px;
+            border: 1px solid black;
+            margin: 5px;
+            font-style: oblique;
+            color: white;
+            text-align: center;
+        }
 
-                #flexbox1 > div:nth-child(1) {
-                    background-color: green;                    
-                }
-                #flexbox1 > div:nth-child(2) {
-                    background-color: yellow;                    
-                }
-                #flexbox1 > div:nth-child(3) {
-                    background-color: red;                    
-                }
-                #flexbox1 > div:nth-child(4) {
-                    background-color: purple;                    
-                }
-                #flexbox1 > div:nth-child(5) {
-                    background-color: blue;                    
-                }
+        #flexbox1>div:nth-child(1) {
+            background-color: green;
+        }
+
+        #flexbox1>div:nth-child(2) {
+            background-color: yellow;
+            color: black;            
+        }
+
+        #flexbox1>div:nth-child(3) {
+            background-color: red;
+        }
+
+        #flexbox1>div:nth-child(4) {
+            background-color: purple;
+        }
+
+        #flexbox1>div:nth-child(5) {
+            background-color: blue;
+        }
     </style>
 </head>
+
 <body>
 
     <div id="flexbox1">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>Green</div>
+        <div>Yellow</div>
+        <div>Red</div>
+        <div>Purple</div>
+        <div>Blue</div>
     </div>
 
 </body>
-    <!--
+<!--
        
         -->
+
 </html>
