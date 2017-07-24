@@ -21,16 +21,19 @@
             display: flex;
             border: 1px solid black;
             margin-top: 100px;
-            min-height: 15px;
-            min-width: 200px;
-            max-width: 460px;
+            min-height: 5px;
+            height: 700px;
+            /* min-width: 200px; */
+            max-width: 75px;
             flex-direction: column;
-            -ms-flex-pack: center;
+            flex-flow: column-reverse;
+            /*Não só reverte a ordem dos elementos, mas como ele começa e onde terminar de ser disposto*/
+            -ms-flex-pack: end;
         }
 
         #flexbox1>div {
-            min-width: 80px;
-            min-height: 80px;
+            width: 50px;
+            height: 50px;
             border: 1px solid black;
             margin: 5px;
             font-style: oblique;
@@ -40,24 +43,26 @@
 
         #flexbox1>div:nth-child(1) {
             background-color: green;
+            flex: 2;
         }
 
         #flexbox1>div:nth-child(2) {
             background-color: yellow;
-            color: black;            
+            color: black;
+            flex: 15;
         }
 
         #flexbox1>div:nth-child(3) {
             background-color: red;
+            flex: 3;
         }
-
-        #flexbox1>div:nth-child(4) {
+        /* #flexbox1>div:nth-child(4) {
             background-color: purple;
         }
 
         #flexbox1>div:nth-child(5) {
             background-color: blue;
-        }
+        } */
     </style>
 </head>
 
@@ -67,13 +72,10 @@
         <div>Green</div>
         <div>Yellow</div>
         <div>Red</div>
-        <div>Purple</div>
-        <div>Blue</div>
+        <!-- <div>Purple</div>
+        <div>Blue</div> -->
     </div>
 
 </body>
-<!--
-       
-        -->
 
 </html>
