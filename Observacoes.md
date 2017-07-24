@@ -314,3 +314,21 @@ Valores possíveis:
 ## font-size
 xx-small, x-small, small, smaller, medium, larger, large,
 x-large, xx-large
+
+
+
+Todo elemento em uma box size. quer seria:
+`height` e `width`
+
+Bordering:
+style,
+spacing --> Referente aos outros elementos adjacentes,
+color, and width of the border.
+
+- Margin
+- padding
+
+
+ #This section demonstrates setting transparency, opacity, a background image, gradients, shadows, and clipping.
+
+ 

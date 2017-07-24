@@ -1,0 +1,87 @@
+div {
+    border-style: solid;
+    border-color: green;
+    width: 800px;
+    height: 800px;
+}
+
+.MyDiv {
+    width: 100px; /*Tamanho de largura*/
+    height: 100px; /* Tamanho de altura */
+    border-style: solid; /* Transforma a borda em sólida*/
+    border-color: red; /*Define uma cor para o borda*/
+    border-spacing: 50px; /* Define um espaço para elementos adjacentes*/
+    border-width: 5px; /*Define a espesura da borda*/
+    margin: 20%; /*Espaço entra a bordar a e parte de fora*/
+    padding: 200px; /*Espaço entra a brodar a e aparte de dentro*/
+    /* border: 10px solid red;  Essa seria a definição em 1 linha*/ 
+}
+
+/* 
+Outras formas de ver seria a descrita abaixo:
+Cada linha representa uma parta da borda e seus atributos como: 
+
+width style color
+*/
+
+/* .MyDiv {
+    border-top: 15px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-bottom: 5px solid black
+} */
+
+p {
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    margin: 0px;
+    padding: 0px; 
+    border-spacing: 0px;
+
+}
+ #test2 {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+    opacity: 0.4; /*Define a opacidade do elemento*/
+    background-image: url('avatar.jpg');
+    background-repeat: repeat;
+    background-size: 100px;
+    /* background-clip: rect(25px, 25px, 25px, 25px);  */
+    color:white;
+}
+#gradiente {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom left, black,gray); /*Também pode ser definido em deg https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_gradients*/
+    box-shadow: 10px 10px 10px 1px red ;     
+    
+}
+#shadow {
+    position: relative;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px red inset; /* o inset dita que a sombra será gerada dentro da box */
+}
+div .img {
+    position: fixed;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    border-color: gray;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+img {
+    position: absolute;
+    left: 20px;
+    clip: rect(25px, 100px, 100px, 25px);
+}
