@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -7,29 +7,18 @@
     <title></title>
 
     <style>
-        /* #flexbox1 {
-            display: -ms-flexbox;
-            -ms-flex-flow: row;
-            -ms-flex-wrap: wrap;
-            border: 1px solid black;
-            margin-top: 100px;
-            min-height: 15px;
-            width: 200px;
-        } */
+        /*Neste cenário será demonstrado o wrap, tem como objetivo re-aranjar os objetos quando não houver mais espaço.*/
 
         #flexbox1 {
             display: flex;
             border: 1px solid black;
             margin-top: 100px;
-            min-height: 5px; 
-            /* height: 200px; */
+            min-height: 5px;
             flex-wrap: wrap;
-            /* min-width: 200px; */
-            max-width: 75px;
+            /*No caso de wrap, ele permite passar para próxima linha caso exista espaço. */
+            max-width: 250px;
             flex-direction: row;
-            /* flex-flow: column-reverse; */
-            /*Não só reverte a ordem dos elementos, mas como ele começa e onde terminar de ser disposto*/
-            -ms-flex-pack: end;
+            /* flex-flow: row wrap;  Está é outra maneira de ditar o fluxo das linhas e se vai ser wrap ou não.*/
         }
 
         #flexbox1>div {
@@ -44,26 +33,24 @@
 
         #flexbox1>div:nth-child(1) {
             background-color: green;
-            /* flex: 2; */
         }
 
         #flexbox1>div:nth-child(2) {
             background-color: yellow;
             color: black;
-            /* flex: 15; */
         }
 
         #flexbox1>div:nth-child(3) {
             background-color: red;
-            /* flex: 3; */
         }
-         #flexbox1>div:nth-child(4) {
+
+        #flexbox1>div:nth-child(4) {
             background-color: purple;
         }
 
         #flexbox1>div:nth-child(5) {
             background-color: blue;
-        } 
+        }
     </style>
 </head>
 
@@ -74,7 +61,7 @@
         <div>Yellow</div>
         <div>Red</div>
         <div>Purple</div>
-        <div>Blue</div> 
+        <div>Blue</div>
     </div>
 
 </body>
