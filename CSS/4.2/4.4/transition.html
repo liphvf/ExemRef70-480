@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        /*
+        transition-property: Specifies the property to which a transition will be applied
+        transition-duration: Specifies how much time the transition should take from start to finish
+        transition-delay: Specifies how long to wait from the time the property is changed before starting the transition 
+
+        When using the individual transition-* properties, you can specify only one property to transition. With the transition shorthand, you are able to specify a comma-separated list.
+
+        transition-timing-function
+        ease: The default value that applies the effect in such a way that it starts slow, speeds up, then ends slow.
+        linear: Makes the transition constant from start to finish
+        ease-in: Causes the transition to have a slow start.
+        ease-out: Causes the transition to have a slow finish.
+        ease-in-out: Causes the transition to have a slow start and a slow finish.
+        cubic-bezier: Allows you to define values. This takes four parameters that are values from 0 and 1.
+         */
+
+        div {
+            margin: 10px 10px 10px 10px;
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            transition: background-color 1s, margin-left 1s, transform 1s;
+            /*Espesifica a propriedade e o tempo que o efeito de transação será aplicado.*/
+            transition-timing-function: linear; 
+        }
+
+        div:hover {
+            transform: rotate(30deg);
+            margin-left: 350px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
