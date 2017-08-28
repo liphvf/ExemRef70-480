@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animals Around the World</title>
+
+    <script>
+        function createCORSRequest(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+                // XHR for Chrome/Firefox/Opera/Safari.
+                xhr.open(method, url, true);
+            } else if (typeof XDomainRequest != "undefined") {
+                // XDomainRequest for IE.
+                xhr = new XDomainRequest();
+                xhr.open(method, url);
+            } else {
+                // CORS not supported.
+                xhr = null;
+            }
+            return xhr;
+        }
+
+        window.onload = function () {
+            var url = '';
+            var xhr = createCORSRequest('GET', url);
+            xhr.withCredentials = true;
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xhr.setRequestHeader("user-key", "");
+            xhr.setRequestHeader("Accept", "application/json");
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(xhr.response);
+
+                }
+            }
+
+            xhr.send();
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
