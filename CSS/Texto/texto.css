@@ -1,0 +1,36 @@
+p {
+  /* Alterar cor */
+  color: green;
+  /* color: #00ff00; */
+  /* color: rgb(0, 255, 0);   */
+
+  /* Negrito */
+  font-weight: bold; /* Equivalente a 700*/
+  /* font-weight: bolder;  Negrito com o valor herdado */
+
+  font-size: 2em;
+  font-style: italic;
+  font-family: Arial, Helvetica,'Times New Roman'; /* Note, caso tenha espaço no nome, a fontde deverá vir entre aspas*/
+
+
+  text-align: center;
+  text-indent: 50px;
+
+  letter-spacing: 8px; /*Espaçamento entre as letras*/
+  word-spacing: 2px; /*Espaçamento entre as palavras*/
+
+}
+
+p  {
+    border: solid;
+    hyphens: auto; /*Diz vai colocar o hifen na quebra de palavras, ou se nao vai quebrar*/
+}
+
+
+/* 
+Serve para importar uma fonte customizada.
+@font-face {
+    font-family: "My Nicer Font";
+    src: url('fonts/my_woff_font.eot');
+    src: url('fonts/my_woff_font.woff');
+} */
