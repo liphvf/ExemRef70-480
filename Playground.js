@@ -94,9 +94,18 @@
 
 // console.log(`Resultado do map: ${roundedMoney}`)
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var factorials = numbers.reduce(factorial);
-function factorial (previous, current) {
-  return previous * current;
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var factorials = numbers.reduce(factorial);
+// function factorial (previous, current) {
+//   return previous * current;
+// }
+// console.log(factorials);
+
+
+function Apple (type) {
+  this.type = type;
+  this.color = "red";
 }
-console.log(factorials);
+
+var x = new Apple();
+console.log(x.color);
