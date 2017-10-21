@@ -27,3 +27,7 @@ Remove: https://www.w3schools.com/jsref/met_element_removeattribute.asp
 
 
 http://api.jquery.com/text/
+
+https://www.w3schools.com/html/html5_canvas.asp
+
+https://www.w3schools.com/css/css3_2dtransforms.asp
